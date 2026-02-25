@@ -1,9 +1,22 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Home() {
   return (
     <div className="relative min-h-screen bg-black flex items-center justify-center overflow-hidden">
       
+      {/* Background Image Fallback */}
+      <div className="absolute inset-0 w-full h-full">
+        <Image
+          src="/hero.png"
+          alt="Hero Background"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+
       {/* Video Background */}
       <video
         autoPlay
@@ -13,7 +26,7 @@ export default function Home() {
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source src="/vedio.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
+        {/* Fallback content will be the image underneath */}
       </video>
 
       {/* Gradient fade overlay */}
