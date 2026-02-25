@@ -1,18 +1,20 @@
-import Image from "next/image";
+"use client";
 
 export default function Home() {
   return (
     <div className="relative min-h-screen bg-black flex items-center justify-center overflow-hidden">
       
-      {/* Image */}
-      <Image
-        src="/hero.png"
-        alt="Hero"
-        width={900}
-        height={600}
-        priority
-        className="object-contain"
-      />
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/vedio.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
       {/* Gradient fade overlay */}
       <div className="pointer-events-none absolute inset-0 
