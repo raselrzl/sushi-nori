@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sushi Nori",
-  description: "Sushi Resturent",
+  title: "Zmooth Pay",
+  description: "Zmooth Pay",
 };
 
 export default function RootLayout({
